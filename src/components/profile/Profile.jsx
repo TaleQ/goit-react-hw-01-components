@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-import { SectionWrap } from "../Common.styled";
-import { UserAvatarWrap, UserDescription, UserStats, UserStatsSpan } from "./Profile.styled";
+import { ProfileWrap, UserAvatarWrap, UserDescription, UserStats, UserStatsSpan } from "./Profile.styled";
 
 const Profile = ({ user }) => {
   const { username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats } = user;
-  return (<SectionWrap>
+  return (<ProfileWrap>
     <UserDescription>
       <UserAvatarWrap>
         <img
@@ -32,7 +31,7 @@ const Profile = ({ user }) => {
         <UserStatsSpan quantity>{stats.likes}</UserStatsSpan>
       </li>
     </UserStats>
-  </SectionWrap>)
+  </ProfileWrap>)
 };
 
 Profile.propTypes = {

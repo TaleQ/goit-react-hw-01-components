@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
-import { SectionWrap } from "../Common.styled";
-import { TransactionTable, TableHead ,TableRow, AmountTd } from "./Transactions.styled";
+import { TransactionTable, TableHead ,TableRow, TableTd } from "./Transactions.styled";
 
 const TransactionHistory = ({ items }) => {
-  return (<SectionWrap><TransactionTable>
+  return (<TransactionTable>
   <TableHead>
     <TableRow>
       <th>Type</th>
@@ -13,12 +12,12 @@ const TransactionHistory = ({ items }) => {
   </TableHead>
     <tbody>
       {items.map(item => (<TableRow key={item.id}>
-      <td>{item.type}</td>
-      <AmountTd>{item.amount}</AmountTd>
-      <td>{item.currency}</td>
+      <TableTd>{item.type}</TableTd>
+      <TableTd amount>{item.amount}</TableTd>
+      <TableTd>{item.currency}</TableTd>
     </TableRow>))}
   </tbody>
-</TransactionTable></SectionWrap>)
+</TransactionTable>)
 }
 
 TransactionHistory.propTypes = {

@@ -4,13 +4,13 @@ import { FriendLi, FriendName, StatusSpan } from './FriendListItem.styled' ;
 const FriendListItem = ({ friends }) => {
   return friends.map(friend => (
     <FriendLi key={friend.id}>
+      <StatusSpan isOnline={friend.isOnline}></StatusSpan>
       <img
         className="avatar"
         src={friend.avatar}
         alt="User avatar"
         width="48"
       />
-      <StatusSpan isOnline={friend.isOnline}></StatusSpan>
       <FriendName>{friend.name}</FriendName>
     </FriendLi>
   ));

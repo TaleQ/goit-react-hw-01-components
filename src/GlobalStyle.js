@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: lightgrey;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
   }
   img {
     display: block;

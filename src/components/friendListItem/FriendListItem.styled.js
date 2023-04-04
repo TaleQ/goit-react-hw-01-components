@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const FriendLi = styled.li`
-width: auto;
-text-align: center;
-img {
-  margin: 0 auto;
-}
+width: 145px;
+padding: 10px;
+display: flex;
+gap: 10px;
+align-items: center;
+background-color: #ffffff;
+border: 1px solid #dddddd;
+border-radius: 6px;
 `;
 
 export const StatusSpan = styled.span`

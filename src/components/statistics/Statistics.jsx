@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
-import { SectionWrap, StatsSpan } from "../Common.styled";
-import { StatisticsTitle, StatisticsList, StatisticsItem } from "./Statistics.styled";
+import { StatisticsWrap, StatisticsTitle, StatisticsList, StatisticsItem, StatsSpan } from "./Statistics.styled";
 
 const Statistics = ({ title, stats }) => {
-  return (<SectionWrap>
+  return (<StatisticsWrap>
     {title && (<StatisticsTitle>{title}</StatisticsTitle>)}
     <StatisticsList count ={stats.length}>
       {stats.map(stat => (<StatisticsItem key={stat.id}>
@@ -11,7 +10,7 @@ const Statistics = ({ title, stats }) => {
       <StatsSpan  quantity>{stat.percentage}</StatsSpan>
     </StatisticsItem>))}
   </StatisticsList>
-</SectionWrap>);
+</StatisticsWrap>);
 }
 
 Statistics.propTypes = {
